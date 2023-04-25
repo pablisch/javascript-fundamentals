@@ -14,3 +14,4 @@ const increment = () => {
 }
 
 setInterval(increment, 1000);
+
