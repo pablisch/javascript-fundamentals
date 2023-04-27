@@ -1,4 +1,4 @@
-const Candy = require('./candy');
+const Candy = require('./candies');
 
 class ShoppingBasket {
   constructor() {
@@ -14,5 +14,6 @@ class ShoppingBasket {
   };
 
 };
+
 
 module.exports = ShoppingBasket;
