@@ -23,6 +23,7 @@ class Pokedox {
 }
 
 pokedox = new Pokedox;
+
 pokedox.catch('ditto').then((pokemon) => console.log(pokemon));
 
 

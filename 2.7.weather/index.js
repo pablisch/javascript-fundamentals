@@ -14,6 +14,7 @@ fetch(apiUrl)
       detail: weatherData.weather.map(item => item.description),
       sunrise: strftime('%Y-%m-%d %H:%M:%S', sunrise),
       sunset: strftime('%Y-%m-%d %H:%M:%S', sunset),
+      name: weatherData.name,
     } )
   });
 

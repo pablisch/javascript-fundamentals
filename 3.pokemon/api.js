@@ -16,3 +16,4 @@ const fetchPokemon = (pokemon) => {
 // ;
 
 module.exports = fetchPokemon;
+

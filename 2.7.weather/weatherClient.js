@@ -1,20 +1,29 @@
 const apiKey = require('./apiKey');
+const strftime = require('strftime');
 
-class weatherClient {
-  constructor() {
-  }
+class WeatherClient {
 
 fetchWeatherData(city) {
   const apiUrl = `http://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${apiKey}`;
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      console.log(`Weather data for ${data.name}:`)
-      console.log(data);
-})};
-}; 
+  return fetch(apiUrl)
+    .then(response => response.json()) 
+    .then(weatherData => {
+      const sunrise = new Date(weatherData.sys.sunrise * 1000);
+      const sunset = new Date(weatherData.sys.sunset * 1000);
+      const weather = {
+        temp: weatherData.main.temp,
+        description: weatherData.weather.map(item => item.main),
+        detail: weatherData.weather.map(item => item.description),
+        sunrise: strftime('%Y-%m-%d %H:%M:%S', sunrise),
+        sunset: strftime('%Y-%m-%d %H:%M:%S', sunset),
+        name: weatherData.name,
+      };
+      return weather;
+    });
+  };
+};
 
-module.exports = weatherClient;
+module.exports = WeatherClient;
 
 // client = new weatherClient;
 

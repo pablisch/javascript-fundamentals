@@ -10,8 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "callback-fetch": "^0.0.1",
+    "https": "^1.0.0",
     "jest": "^29.5.0",
     "strftime": "^0.10.1"
+  },
+  "devDependencies": {
+    "jest-fetch-mock": "^3.0.3"
   }
 }
