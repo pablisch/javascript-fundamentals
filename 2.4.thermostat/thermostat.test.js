@@ -66,3 +66,8 @@ describe("thermostat", () => {
         expect(stat.getTemperature()).toBe(20);
       });
   });
+
+  test("class Thermostat returns thermostaterature as 20", () => {
+    const thermostat = new Thermostat();
+    expect(thermostat.getTemperature()).toEqual(20);
+  });
