@@ -30,23 +30,15 @@ class Weather {
   }
 }
 
+// 👇🏻 to create objects before running function in terminal
 // const client = new WeatherClient()
 // const weather = new Weather(client)
 
-
+// 👇🏻 to run the functions in terminal
 // weather.load2('Bristol')
 // .then(() => {
 //   console.log(weather.getWeatherData())
 // });
-
-
-// console.log(weather.getWeatherData());
-
-// weather.load('Bristol').then(() => {
-//   console.log(weather.getWeatherData())
-// });
-
-
 
 module.exports = Weather;
 
